@@ -1,2 +1,5 @@
 .DS_Store
-MarkBot/db.sqlite3
+db.sqlite3
+__pycache__
+launch.json
+.vscode
