@@ -15,10 +15,20 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+
+# Import from django configeration urls ... url and include
+from django.conf.urls import (url, include)
+
+# Import app views
 from GoogleCal_App import views
-from django.conf.urls import url
 
 urlpatterns = [
+    # matching any pattern give the index view
+    url(r'^$', views.index, name="index"),
+
+    # for endpoint ending with r'^google/' include the...
+    # "mini urls from GoogleCal_App urls.py file"
+    url(r'^google/', include('GoogleCal_App.urls')),
     path('admin/', admin.site.urls),
-    url(r'^$', views.index, name="index")
+
 ]

@@ -6,3 +6,7 @@ from django.http import HttpResponse
 
 def index(request):
     return HttpResponse("<em>Begin MarkBot</em>")
+
+
+def control(request):
+    return HttpResponse("Control Dashboard exists here!")
