@@ -4,9 +4,14 @@ from django.http import HttpResponse
 # Create your views here.
 
 
-def index(request):
-    return HttpResponse("<em>Begin MarkBot</em>")
+def app_index(request):
+    return HttpResponse("You have found Homepage of MarkBot, click next to learn more!")
 
 
-def control(request):
-    return HttpResponse("Control Dashboard exists here!")
+def bot(request):
+    my_dict = {'insert_me': "Hello I am MarkBot, please to meet you! I can assist putting Toggl entries onto Google Calendar!"}
+    return render(request, 'GoogleCal_App/index.html', context=my_dict)
+
+
+def dash(request):
+    return HttpResponse("Bot Config Dashboard exists here!")

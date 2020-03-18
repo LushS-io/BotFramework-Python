@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'GoogleCal_App'
+    'GoogleCal_App',
+    'ReactApp'
 ]
 
 MIDDLEWARE = [

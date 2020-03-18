@@ -21,14 +21,16 @@ from django.conf.urls import (url, include)
 
 # Import app views
 from GoogleCal_App import views
+from ReactApp import views
 
 urlpatterns = [
     # matching any pattern give the index view
-    url(r'^$', views.index, name="index"),
+    url(r'^$', views.web_index, name="web_index"),
 
     # for endpoint ending with r'^google/' include the...
     # "mini urls from GoogleCal_App urls.py file"
-    url(r'^google/', include('GoogleCal_App.urls')),
+    url(r'^bot/', include('GoogleCal_App.urls')),
+    url(r'^home/', include('ReactApp.urls')),
     path('admin/', admin.site.urls),
 
 ]

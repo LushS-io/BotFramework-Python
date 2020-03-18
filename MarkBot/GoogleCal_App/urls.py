@@ -6,6 +6,7 @@ from django.conf.urls import url
 from GoogleCal_App import views
 
 urlpatterns = [
-    url(r'^$', views.index, name='index'),
-    url(r'^control/', views.control, name='control')
+    url(r'^$', views.app_index, name='app_index'),
+    url(r'^welcome/', views.bot, name='welcome'),
+    url(r'^config/', views.dash, name='dash')
 ]
