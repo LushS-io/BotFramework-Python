@@ -4,3 +4,4 @@ __pycache__
 launch.json
 .vscode
 toggl_to_gcal_old
+*.code-workspace
